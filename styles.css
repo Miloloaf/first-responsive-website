@@ -71,9 +71,9 @@ justify-content: center;
 }
 
 
-.grid-cell-1:active .grid-cell-1-description{
+/* .grid-cell-1:active .grid-cell-1-description{
   opacity: 1;
-}
+} */
 
 /* .grid-cell-1:hover .grid-cell-1-description{
   opacity: 1;
