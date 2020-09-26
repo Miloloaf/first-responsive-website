@@ -75,9 +75,9 @@ justify-content: center;
   opacity: 1;
 }
 
-.grid-cell-1:hover .grid-cell-1-description{
+/* .grid-cell-1:hover .grid-cell-1-description{
   opacity: 1;
-}
+} */
 
 img{
     object-fit: cover;
