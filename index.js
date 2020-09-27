@@ -1,39 +1,27 @@
-function firstImageDown(e) {
-  document.getElementById('grid-cell-1-description').style.opacity = '1'
+function addListeners(idToSearch) {
+  let imgDown = () => {
+    document.getElementById(idToSearch).style.opacity = '1'
+  }
+
+  let imgUp = () => {
+    document.getElementById(idToSearch).style.opacity = '0'
+  }
+
+  document
+    .getElementById(idToSearch)
+    .addEventListener('mousedown', () => imgDown())
+  document.getElementById(idToSearch).addEventListener('mouseup', () => imgUp())
+  document
+    .getElementById(idToSearch)
+    .addEventListener('touchstart', () => imgDown())
+  document
+    .getElementById(idToSearch)
+    .addEventListener('touchend', () => imgUp())
 }
 
-function firstImageUp(e) {
-  document.getElementById('grid-cell-1-description').style.opacity = '0'
-}
-
-function secondImageDown() {
-    document.getElementById('grid-cell-2-description').style.opacity = '1'
-}
-
-function secondImageUp() {
-document.getElementById('grid-cell-2-description').style.opacity = '0'
-}
-
-document
-  .getElementById('grid-cell-1-description')
-  .addEventListener('mousedown', firstImageDown)
-document
-  .getElementById('grid-cell-1-description')
-  .addEventListener('mouseup', firstImageUp)
-document
-  .getElementById('grid-cell-1-description')
-  .addEventListener('touchstart', firstImageDown)
-document
-  .getElementById('grid-cell-1-description')
-  .addEventListener('touchend', firstImageUp)
-
-function addListeners(idToSearch, ondown, onup) {
-    
-
-  document.getElementById(idToSearch).addEventListener('mousedown', ondown);
-  document.getElementById(idToSearch).addEventListener('mouseup', onup);
-  document.getElementById(idToSearch).addEventListener('touchstart', ondown)
-  document.getElementById(idToSearch).addEventListener('touchend', onup)
-}
-
-addListeners('grid-cell-2-description', secondImageDown, secondImageUp)
+addListeners('grid-cell-1-description')
+addListeners('grid-cell-2-description')
+addListeners('grid-cell-3-description')
+addListeners('grid-cell-4-description')
+addListeners('grid-cell-5-description')
+addListeners('grid-cell-6-description')
